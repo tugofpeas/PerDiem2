@@ -3,6 +3,7 @@
  *  Date: 2017-07-06
  *  Description: A more simplified financial calculator to compute allocated amount for meals. 
  */
+//  http://jsfiddle.net/karalamalar/8e92d/
 
 //Meals Per day
 function mealsPerDay(perDiemRate){
