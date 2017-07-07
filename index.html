@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Financial Calculator</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div style="float: left; margin: 15px;">
+		<table class="table">
+			<tbody>
+				<tr>
+					<td>Enter Per Diem Daily Rate</td>
+					<td><input min="0.00" name="PerDiemRate" type="number" value="0.00"></td>
+				</tr>
+				<tr>
+					<td>Type of Traveling</td>
+					<td>
+						<select name="MealType">
+						<option id="LessThanTwenty">Less than 20 hrs.</option>
+						<option id="LessThanTen">Less than 10 hrs.</option>
+						<option id="Conference">Conference Meals</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td># of Meal(s)</td>
+					<td>
+						<select name="NumbMeals">
+							<option>1</option>
+							<option>2</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Total Amount</td>
+					<td>$<input class="results" disabled="disabled" name="TotalAmount" value="0.00" readonly="readonly" type="number"></td>
+				</tr>
+			</tbody>
+		</table>
+		<div align="center">
+			<button onclick="getRates()" type="button">Get Rates</button> <button onclick="resetFields()" type="button">Reset</button>
+		</div>
+		<p style="font-size: 12px;width: 320px;">Note: If you are using Internet Explorer, click the Allow Blocked Content button to allow the script to execute.</p>
+	</div>
+	<div style="float: left; font-size: 12px;line-height: 12px;margin-left: 15px;width: 40%;">
+		<ol>
+			<li>Fill out the Per Diem daily rate, the type of traveling you'll be attending, and # of meals.</li>
+			<p>Traveling type for less than 20 hrs. and 10 hrs. is based off of the 1st and last day. Conference meals aren't for 1st or last day. Click the Get Rates button to populate the right side of the table. Click the Reset button to reset the calculator to default values.</p>
+			
+			<li>For a full breakdown, click here</li>
+			
+			
+		</ol>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>
