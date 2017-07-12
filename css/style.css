@@ -35,3 +35,10 @@ background: -webkit-linear-gradient(top,  #0064b1 0%,#00457e 100%); /* Chrome10-
 background: linear-gradient(to bottom,  #0064b1 0%,#00457e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0064b1', endColorstr='#00457e',GradientType=0 ); /* IE6-9 */
 }
+#Instructions {
+	float: left;
+	clear: both;
+	font-size: 12px;
+	line-height: 12px;
+	width: 320px;
+}
