@@ -5,43 +5,44 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<form id="form">
 	<div style="float: left; margin: 15px;">
 		<table class="table">
 			<tbody>
 				<tr>
 					<td>Enter Per Diem Daily Rate</td>
-					<td><input min="0.00" name="PerDiemRate" type="number" value="0.00"></td>
+					<td><input min="0.00" id="input.PerDiemRate" type="number" value="0.00"></td>
 				</tr>
 				<tr>
 					<td>Incidental Value</td>
-					<td>$<input class="results" disabled="disabled" value="5.00" readonly="readonly" type="number"></td>
+					<td>$<input id="input.IncValue" class="results" disabled="disabled" value="5.00" readonly="readonly" type="number"></td>
 				</tr>
 				<tr>
 					<td>Type of Traveling</td>
 					<td>
-						<select name="MealType">
-							<option id="LessThanTen">First & Last Day < 10 hrs.</option>
-							<option id="Conference">Conference Meals</option>
+						<select id="input.MealType">
+							<option value="1">First &amp; Last Day < 10 hrs.</option>
+							<option value="2">Conference Meals</option>
 						</select>
 					</td>
 				</tr>
 				<tr>
 					<td># of Meal(s)</td>
 					<td>
-						<select name="NumbMeals">
-							<option>1</option>
-							<option>2</option>
+						<select id="input.NumbMeals">
+							<option value="4">1</option>
+							<option value="8">2</option>
 						</select>
 					</td>
 				</tr>
 				<tr>
 					<td>Total Amount</td>
-					<td>$<input class="results" disabled="disabled" name="TotalAmount" value="0.00" readonly="readonly" type="number"></td>
+					<td>$<input class="results" disabled="disabled" id="output.TotalAmount" value="0.00" type="number"></td>
 				</tr>
 			</tbody>
 		</table>
 		<div align="center">
-			<button onclick="getRates()" type="button">Get Rates</button> <button onclick="resetFields()" type="button">Reset</button>
+			<button type="button" id="btn.submit">Get Rates</button> <button id="btn.reset" type="button">Reset</button>
 		</div>
 		<div id="Instructions">
 			<p>Fill out the Per Diem daily rate, the type of traveling you'll be attending, and # of meals.</p>
@@ -51,7 +52,8 @@
 		</div>
 
 	</div>
-	
-	<script src="js/script.js"></script>
+	</form>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="js/calculator.js"></script>
 </body>
 </html>
